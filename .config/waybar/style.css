@@ -1,0 +1,134 @@
+* {
+    font-family: "CaskaydiaMono Nerd Font Propo";
+    font-size: 12px;
+    font-weight: 700;
+    border: none;
+    border-radius: 0;
+    transition: all 0.3s ease;
+}
+
+window#waybar {
+    background: transparent;
+}
+
+.modules-left,
+.modules-center,
+.modules-right {
+    background: rgba(30, 30, 46, 0.85);
+    border: 1px solid rgba(203, 166, 247, 0.25);
+    margin: 4px 6px;
+    padding: 2px 10px;
+    border-radius: 10px;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.5);
+}
+
+#workspaces button {
+    padding: 0 6px;
+    color: #6c7086;
+    font-size: 12px;
+}
+
+#workspaces button + button {
+    border-left: 1px solid rgba(203, 166, 247, 0.2);
+    margin-left: 2px;
+    padding-left: 8px;
+}
+
+#workspaces button.active {
+    color: #cba6f7;
+    background: rgba(203, 166, 247, 0.15);
+    border-radius: 6px;
+}
+
+#workspaces button.occupied {
+    color: #a6adc8;
+}
+
+#workspaces button:hover {
+    background: rgba(203, 166, 247, 0.08);
+    color: #cba6f7;
+}
+
+#cpu,
+#memory,
+#temperature,
+#network,
+#pulseaudio,
+#backlight,
+#battery,
+#bluetooth,
+#mpris,
+#custom-cava {
+    padding: 0 8px;
+    margin: 2px 0;
+}
+
+#cpu { color: #f38ba8; }
+#memory { color: #fab387; }
+#disk { color: #f9e2af; }
+
+#temperature { color: #a6e3a1; }
+#temperature.critical {
+    color: #f38ba8;
+    animation: blink 1s step-start infinite;
+}
+
+#network { color: #94e2d5; }
+#network.disconnected { color: #f38ba8; }
+
+#pulseaudio { color: #89dceb; }
+#pulseaudio.muted { color: #6c7086; }
+
+#bluetooth { color: #89b4fa; }
+#bluetooth.connected { color: #89b4fa; }
+
+#backlight { color: #b4befe; }
+
+#battery { color: #cba6f7; }
+#battery.warning { color: #f9e2af; }
+#battery.critical {
+    color: #f38ba8;
+    animation: blink 1s step-start infinite;
+}
+
+#language { color: #f5c2e7; }
+
+#clock {
+    color: #11111b;
+    background: linear-gradient(45deg, #cba6f7, #89b4fa);
+    border-radius: 7px;
+    padding: 0 12px;
+    margin-left: 8px;
+}
+
+#custom-logo {
+    font-size: 15px;
+    color: #cba6f7;
+    padding-right: 8px;
+}
+
+#custom-cava {
+    color: #cba6f7;
+    font-size: 10px;
+}
+
+#mpris {
+    background: rgba(203, 166, 247, 0.08);
+    padding: 0 12px;
+    border-radius: 6px;
+    color: #f5c2e7;
+    border: 1px solid rgba(203, 166, 247, 0.15);
+}
+
+#tray { padding: 0 6px; }
+
+#custom-expand {
+    padding: 0 6px;
+    color: #6c7086;
+}
+
+.modules-right > widget { margin: 0 2px; }
+
+@keyframes blink {
+    50% { opacity: 0.5; }
+}

@@ -1,0 +1,118 @@
+configuration {
+    modi: "drun";
+    show-icons: true;
+    icon-theme: "Papirus-Dark";
+    display-drun: "";
+    drun-display-format: "{name}";
+    disable-history: false;
+    hide-scrollbar: true;
+    sidebar-mode: false;
+    terminal: "kitty";
+    font: "CaskaydiaCove Nerd Font Mono 11";
+}
+
+* {
+    bg:         #1e1e2e;
+    bg-alt:     #181825;
+    fg:         #cdd6f4;
+    mauve:      #cba6f7;
+    blue:       #89b4fa;
+    surface:    #313244;
+    overlay:    #45475a;
+    muted:      #6c7086;
+    background-color: transparent;
+    text-color: @fg;
+}
+
+window {
+    transparency: "real";
+    location: center;
+    anchor: center;
+    width: 420px;
+    border: 2px;
+    border-radius: 12px;
+    border-color: @mauve;
+    background-color: @bg;
+}
+
+mainbox {
+    padding: 16px;
+    spacing: 10px;
+    background-color: transparent;
+    children: [ "inputbar", "listview" ];
+}
+
+inputbar {
+    padding: 10px 14px;
+    border-radius: 8px;
+    border: 1px;
+    border-color: @surface;
+    background-color: @bg-alt;
+    children: [ "entry" ];
+}
+
+prompt {
+    enabled: false;
+}
+
+entry {
+    placeholder: " search...";
+    placeholder-color: @muted;
+    background-color: transparent;
+    text-color: @fg;
+    horizontal-align: 0.5;
+    cursor: text;
+    font: "CaskaydiaCove Nerd Font Mono 11";
+}
+
+listview {
+    columns: 1;
+    lines: 6;
+    spacing: 4px;
+    cycle: true;
+    dynamic: true;
+    scrollbar: false;
+    layout: vertical;
+    fixed-height: true;
+    fixed-columns: true;
+    background-color: transparent;
+}
+
+element {
+    padding: 8px 12px;
+    spacing: 10px;
+    border-radius: 8px;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+element normal.normal {
+    background-color: transparent;
+    text-color: @fg;
+}
+
+element selected.normal {
+    background-color: @surface;
+    text-color: @mauve;
+}
+
+element alternate.normal {
+    background-color: transparent;
+    text-color: @fg;
+}
+
+element-icon {
+    size: 26px;
+    background-color: transparent;
+    cursor: inherit;
+}
+
+element-text {
+    background-color: transparent;
+    text-color: inherit;
+    highlight: none;
+    vertical-align: 0.5;
+    horizontal-align: 0.0;
+    cursor: inherit;
+    font: "CaskaydiaCove Nerd Font Mono 11";
+}
